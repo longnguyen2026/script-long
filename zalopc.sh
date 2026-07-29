@@ -37,6 +37,11 @@ software-properties-common
 
 echo -e "${YELLOW}>> Configuring WineHQ repository...${NC}"
 
+echo -e "${YELLOW}>> Removing old WineHQ configuration...${NC}"
+
+sudo rm -f /etc/apt/sources.list.d/winehq-*.sources
+sudo rm -f /etc/apt/keyrings/winehq-archive.*
+
 sudo mkdir -p /etc/apt/keyrings
 
 sudo rm -f /etc/apt/keyrings/winehq-archive.key
